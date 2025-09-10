@@ -10,7 +10,7 @@ solutions_db <- dbConnect(
   host = "localhost",
   port = 5432,
   user = "postgres",
-  password = "157575",
+  password = "******",
   dbname = "Solutions"
 )
 
@@ -143,3 +143,4 @@ facing_cbet %>%
     axis.title.x=element_blank(),
     axis.title.y=element_blank(),
   )
+
