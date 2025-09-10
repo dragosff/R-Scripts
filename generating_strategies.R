@@ -142,7 +142,7 @@ if(dbGetQuery(solutions_db, glue("SELECT COUNT(*) FROM lookup_nodes WHERE id_tre
     str_c(
       "INSERT INTO lookup_nodes (id_tree, node_name, has_position) VALUES \n",
       sapply(
-        1:length(nodes), function(e) str_c("(20, '", nodes[e], "', ", has_position[e], ")")
+        1:length(nodes), function(e) str_c("(", id_tree, " '", nodes[e], "', ", has_position[e], ")")
       ) %>% 
         str_c(collapse = ",\n"),
       ";")
@@ -355,3 +355,4 @@ for (i in 1:length(boards)) {
 
 con$kill()
 dbDisconnect(solutions_db)
+
